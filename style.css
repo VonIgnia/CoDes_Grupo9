@@ -1,0 +1,258 @@
+
+/* header para todas as páginas */
+
+.header {
+  position: fixed;
+  border-style: solid;
+  border-width: 10px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+  background-color: red;
+}
+
+.nav {
+  display: inline-block;
+  position: relative;
+  top: -20px;
+}
+
+.nav-item {
+  background-color: gold;
+  display: inline;
+}
+
+.search-bar {
+	position: absolute;
+	left: 78%;
+}
+
+/* footer para todas as páginas */
+
+.footer {
+  position: fixed;
+  border-style: solid;
+  border-width: 10px;
+  padding: 10px;
+  width: 100%;
+  bottom: 0;
+  background-color: red;
+  box-sizing: border-box;
+  z-index: 1;
+  text-align: right;
+  font-weight: bold;
+}
+
+.icones {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
+
+.icone {
+	display: inline;
+	position: relative;
+}
+
+/* index.html */
+
+.main {
+	position: absolute;
+	top: 100px;
+	width: 100%;
+}
+
+.titulo {
+	position: relative;
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.main-img {
+	position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-radius: 50%
+}
+
+
+.subtitulo{
+	position: relative;
+	text-align: right;
+	font-style: italic;
+	margin-right: 20px;
+}
+
+.descricao {
+	position: relative;
+	text-align: center;
+}
+
+.categorias {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+}
+
+.categoria {
+  display: inline-block;
+  text-align: left;
+  position: relative;
+  width: 700px;
+  height: 250px;
+  background-color: gold;
+}
+
+.categoria-imagem {
+  position: relative;
+  width: 250px;
+  height: 250px;
+}
+
+.categoria-texto {
+	display: inline-block;
+  position: relative;
+  top: -190px;
+  left: 10px;
+}
+
+.categoria-nome {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.about-me {
+  display: block;
+  text-align: left;
+  position: absolute;
+  width: 100%;
+  height: 250px;
+  top:1190px;
+}
+
+.about-me-imagem {
+	position: absolute;
+	right: 0%;
+  width: 250px;
+  height: 250px;
+}
+
+.about-me-texto {
+	display: inline-block;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  width: 1600px;
+}
+
+/* categoria.html */
+
+.jogos-img {
+	position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  border-radius: 50%;
+}
+
+/* projeto.html */
+
+.subtitulo-jogo {
+	position: relative;
+	text-align: center;
+	font-style: italic;
+	margin-right: 20px;
+}
+
+.projeto-img {
+	position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-radius: 0%;
+}
+
+.equipe {
+  display: inline-block;
+  position: relative;
+  top: 10px;
+  left: 480px;
+}
+
+.membro {
+  background-color: gold;
+  display: inline;
+}
+
+.ano {
+	display: inline-block;
+  position: relative;
+  background-color: gold;
+  top: 10px;
+  left: 975px;
+}
+
+.descricao-jogo {
+  display: block;
+  text-align: left;
+  position: absolute;
+  width: 100%;
+  height: 250px;
+  background-color: gold;
+  top: 600px;
+}
+
+.descricao-jogo-texto {
+	display: inline-block;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  width: 1600px;
+}
+
+.descricao-jogo-imagem {
+	position: absolute;
+	right: 0%;
+  width: 250px;
+  height: 250px;
+}
+
+.informacoes {
+
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 860px;
+
+}
+
+.informacoes-texto {
+	display: inline-block;
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+
+.imagem1{
+	position:absolute;
+	top: 1300px;
+	left: 850px;
+}
+
+.imagem2{
+	position:absolute;
+	top: 1300px;
+	left: 400px;
+}
+
+.imagem3{
+	position:absolute;
+	top: 1300px;
+	left: 1300px;
+}
