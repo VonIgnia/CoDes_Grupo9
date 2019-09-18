@@ -1,0 +1,236 @@
+/*APRESENTACAO*/
+.apresentacao {
+	display: flex;
+  flex-direction: column;
+}
+.apresentacao-titulo {
+  font-family: 'DM Serif Display', serif;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #000000;
+}
+.apresentacao-imagem1, .apresentacao-imagem2, .apresentacao-imagem3 {
+  margin: 1rem auto;
+  border-radius: 50%
+}
+.apresentacao-imagem1 {
+  width: 50rem;
+}
+.apresentacao-imagem2 {
+  width: 30rem;
+}
+.apresentacao-imagem3, .legenda {
+  width: 50rem;
+  border-radius: 0%;
+}
+.apresentacao-subtitulo{
+  font-family: 'DM Serif Display', serif;
+  text-align: right;
+  font-style: italic;
+  margin-right: 1.5rem;
+  color: #000000;
+}
+.apresentacao-subtitulo3{
+  font-family: 'DM Serif Display', serif;
+  text-align: center;
+  font-style: italic;
+  margin-right: 1.5rem;
+  color: #000000;
+}
+.apresentacao-descricao {
+  font-family: 'Quattrocento Sans', sans-serif;
+  font-size: 1.25rem;
+  text-align: center;
+  color: #000000;
+}
+/*SECOES*/
+.secoes {
+	display: flex;
+  flex-flow: row wrap;
+  width: 95%;
+  margin: 2rem auto;
+}
+.secao {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 49%;
+  background-color: #DAD292;
+  margin: .25rem;
+}
+.secao-imagem {
+}
+.secao-info {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-left: 1rem;
+}
+.secao-nome {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2rem;
+  margin-top: .5rem;
+  font-weight: bold;
+  color: #000000;
+}
+.secao-descricao{
+  font-family: 'Quattrocento Sans', sans-serif;
+  margin-top: .5rem;
+  margin-left: .5rem;
+  color: #000000;
+}
+/*ABOUT*/
+.about {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 95%;
+  margin: 0 auto;
+}
+.about-info{
+  display: flex;
+  flex-flow: column nowrap;
+  width: 49%;
+  margin: .25rem;
+}
+.about-titulo {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000000;
+}
+.about-descricao {
+  font-family: 'Quattrocento Sans', sans-serif;
+  margin-top: .5rem;
+  margin-left: .5rem;
+  color: #000000;
+}
+.about-figure {
+  display: flex;
+  justify-content: flex-end;
+  width: 49%;
+  margin: .25rem;
+}
+.about-imagem {
+}
+/*PROJETO*/
+.legenda {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.integrante-box {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 50%;
+}
+.ano-box {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  width: 50%;
+}
+.ano, .integrante {
+  background-color: #DAD292;
+  padding: 1rem;
+}
+.secoes2 {
+  display: flex;
+  flex-flow: row wrap;
+  width: 95%;
+  margin: 2rem auto;
+  margin-bottom: 0;
+}
+.secao2 {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 80%;
+  background-color: #DAD292;
+  margin: .25rem;
+  margin-bottom: .75rem;
+  box-sizing: border-box;
+}
+.secao-imagem2 {
+  width: 19%;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #BF414C;
+  box-sizing: border-box;
+}
+.about-info2 {
+  display: flex;
+  background-color: #DAD292;
+  flex-flow: column nowrap;
+  width: 49.5%;
+  padding: 1rem 0;
+  margin: .25rem;
+  margin-top: 0;
+}
+.about-titulo {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2rem;
+  margin-left: .5rem;
+  font-weight: bold;
+  color: #000000;
+}
+.about-descricao {
+  font-family: 'Quattrocento Sans', sans-serif;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  color: #000000;
+}
+.galeria-figure {
+  display: flex;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: .5rem;
+  justify-content: center;
+}
+.galeria-image {
+  margin: 0 .5rem;
+}
+/*MOBILE*/
+@media (max-width: 500px) {
+  .apresentacao-imagem1, .apresentacao-imagem2, .apresentacao-imagem3 {
+    margin: .5rem auto;
+  }
+  .apresentacao-titulo {
+    font-size: 2rem;
+  }
+  .apresentacao-imagem1 {
+    width: 90%;
+  }
+  .apresentacao-imagem2 {
+    width: 90%;
+  }
+  .apresentacao-imagem3, .legenda {
+    width: 90%;
+  }
+  .secao2 {
+    width: 70%;
+  }
+  .secao-imagem2 {
+    width: 25%;
+  }
+  .about-info2{
+    width: 95%;
+  }
+  .galeria-figure {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: .25rem;
+  }
+  .galeria-image {
+    margin-top: .5rem
+  }
+  .about {
+    flex-flow: column nowrap;
+  }
+  .about-info{
+    width: 100%;
+  }
+  .about-figure {
+    width: 100%;
+    justify-content: center;
+  }
+  .secao-imagem {
+    width: 10rem;
+  }
+}
