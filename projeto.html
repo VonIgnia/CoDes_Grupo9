@@ -8,31 +8,52 @@
   <link href="assets/css/style-basics.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans&display=swap" rel="stylesheet">
+  <script src="assets/js/codes.js"></script>
+  <script src="assets/js/projetos.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
 <body class="body">
 	<header class="header">
-		<a class="header-logo" href="index.html"><img class="logo" src="assets/img/logo.png" alt="Logo"></a>
-    <a class="header-item" href="categoria.html">Design</a>
-    <a class="header-item" href="categoria.html">Exatas</a>
-    <a class="header-item" href="categoria.html">Jogos</a>
-    <a class="header-item" href="categoria.html">Laboratório</a>
+    <a class="header-logo" href="index.html">
+      <img class="logo" src=assets/img/logo.jpeg alt="Logo">
+    </a>
+    {{#each this}}
+
+    <a class="header-item" href="categoria.html?categoria={{@key}}">
+      {{@key}}
+    </a>
+
+    {{/each}}  
     <img class="header-search" src="assets/img/search-bar.png" alt="Barra de Pesquisa">
   </header>
 
   <main class="main">
     <figure class="apresentacao">
-      <h1 class="apresentacao-titulo">Portifolio - Projeto</h1>
-      <h2 class="apresentacao-subtitulo3">by Antonio Trussardi</h2>
-      <img class="apresentacao-imagem3" src="assets/img/last_surprize.png" alt="Cubo composto por engrenagens">
+      <h1 class="apresentacao-titulo">
+        Portifolio - {{this.titulo}}
+      </h1>
+      <h2 class="apresentacao-subtitulo3">
+        {{this.descricao}}
+      </h2>
+      <img class="apresentacao-imagem3" src="assets/img/{{this.pasta}}/imagem1.png" alt="{{this.alt}}">
       <div class=legenda>
         <ul class="integrante-box">
-          <li class="integrante">ALUNO 1</li>
+
+          {{#each equipe}}
+
+          <li class="integrante">
+            {{this}}
+          </li>
+
+          {{/each}}
+
         </ul>
         <div class=ano-box>
-          <p class=ano>2019</p>
+          <p class=ano>
+            {{this.ano}}
+          </p>
         </div>
       </div>
     </figure>
@@ -40,42 +61,40 @@
     <nav class="secoes2">
       <div class="secao2">
         <div class="secao-info">
-          <h3 class="secao-nome">Design</h3>
-          <p class="secao-descricao">Projetos relacionados à Design</p>
+          <h3 class="secao-nome">
+            Descrição
+          </h3>
+          <p class="secao-descricao">
+            {{this.descricao}}
+          </p>
         </div>
       </div>
-      <img class="secao-imagem2" src="https://picsum.photos/250/250/?random" alt="Design">
+      <img class="secao-imagem2" src="assets/img/{{this.pasta}}/imagem2.png" alt="{{this.alt}}">
     </nav>
 
     <div class="about">
       <div class="about-info2">
-        <h3 class="about-titulo">About me:</h3>
+        <h3 class="about-titulo">
+          Materiais
+        </h3>
         <p class="about-descricao">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          {{this.materiais}}
         </p>
       </div>
       <div class="about-info2">
-        <h3 class="about-titulo">About me:</h3>
+        <h3 class="about-titulo">
+          Laboratório Utilizado?
+        </h3>
         <p class="about-descricao">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          {{this.fablab}}
         </p>
       </div>
     </div>
 
     <figure class="galeria-figure">
-      <img class="galeria-image" src="https://picsum.photos/250/250/?random" alt="Design">
-      <img class="galeria-image" src="https://picsum.photos/250/250/?random" alt="Design">
-      <img class="galeria-image" src="https://picsum.photos/250/250/?random" alt="Design">
+      <img class="galeria-image" src="assets/img/{{this.pasta}}/imagem3.png" alt="Exemplo">
+      <img class="galeria-image" src="assets/img/{{this.pasta}}/imagem4.png" alt="Exemplo">
+      <img class="galeria-image" src="assets/img/{{this.pasta}}/imagem5.png" alt="Exemplo">
     </figure>
   </main>
 

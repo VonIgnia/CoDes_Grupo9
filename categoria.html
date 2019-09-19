@@ -8,41 +8,51 @@
   <link href="assets/css/style-basics.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans&display=swap" rel="stylesheet">
+  <script src="assets/js/codes.js"></script>
+  <script src="assets/js/categoria.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
 <body class="body">
-	<header class="header">
-		<a class="header-logo" href="index.html"><img class="logo" src="assets/img/logo.png" alt="Logo"></a>
-    <a class="header-item" href="categoria.html">Design</a>
-    <a class="header-item" href="categoria.html">Exatas</a>
-    <a class="header-item" href="categoria.html">Jogos</a>
-    <a class="header-item" href="categoria.html">Laboratório</a>
+  <header class="header">
+    <a class="header-logo" href="index.html">
+      <img class="logo" src=assets/img/logo.jpeg alt="Logo">
+    </a>
+    {{#each this}}
+
+    <a class="header-item" href="categoria.html?categoria={{@key}}">
+      {{@key}}
+    </a>
+
+    {{/each}}  
     <img class="header-search" src="assets/img/search-bar.png" alt="Barra de Pesquisa">
   </header>
 
   <main class="main">
     <figure class="apresentacao">
-      <h1 class="apresentacao-titulo">Portifolio - Categoria</h1>
-      <img class="apresentacao-imagem2" src="assets/img/jogos.jpg" alt="Cubo composto por engrenagens">
+      <h1 class="apresentacao-titulo">
+      Portifolio - {{this}}
+      </h1>
+      <img class="apresentacao-imagem2" src="assets/img/{{this}}.jpeg" alt="{{this.alt}}">
     </figure>
 
     <nav class="secoes">
-      <a href="projeto.html" class="secao">
-        <img class="secao-imagem" src="https://picsum.photos/250/250/?random" alt="Design">
+      {{#each projetos}}
+
+      <a href="projeto.html?categoria=qual_categoria&projeto={{@key}}" class="secao">
+        <img class="secao-imagem" src="assets/img/{{@key}}.jpg" alt="{{this.alt}}">
         <div class="secao-info">
-          <h3 class="secao-nome">Design</h3>
-          <p class="secao-descricao">Projetos relacionados à Design</p>
+          <h3 class="secao-nome">
+            {{this.nome}}
+          </h3>
+          <p class="secao-descricao">
+            {{this.descricao}}
+          </p>
         </div>
       </a>
-      <a href="projeto.html" class="secao">
-        <img class="secao-imagem" src="https://picsum.photos/250/250/?random" alt="Design">
-        <div class="secao-info">
-          <h3 class="secao-nome">Design</h3>
-          <p class="secao-descricao">Projetos relacionados à Design</p>
-        </div>
-      </a>
+
+      {{/each}}
     </nav>
   </main>
 
