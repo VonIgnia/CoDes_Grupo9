@@ -204,6 +204,10 @@
   .apresentacao-imagem3, .legenda {
     width: 90%;
   }
+
+  .secao {
+    width: 100%;
+  }
   .secao2 {
     width: 70%;
   }
