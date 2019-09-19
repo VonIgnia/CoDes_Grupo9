@@ -19,6 +19,8 @@ a:hover {
 .header-logo {
 }
 .logo {
+  width: 4rem;
+  border-radius: 100%;
 }
 .header-item {
   font-family: 'DM Serif Display', sans-serif;

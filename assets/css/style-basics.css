@@ -59,6 +59,7 @@
   margin: .25rem;
 }
 .secao-imagem {
+  width: 12rem;
 }
 .secao-info {
   display: flex;
